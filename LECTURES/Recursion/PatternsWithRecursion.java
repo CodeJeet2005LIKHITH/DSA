@@ -14,7 +14,7 @@ public class PatternsWithRecursion {
         }
         else{
             System.out.println();
-            Triangle(row-1, ++colum);
+            Triangle(row-1, 0);
         }
     }
     
