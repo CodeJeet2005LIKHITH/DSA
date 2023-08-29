@@ -3,7 +3,7 @@ package LECTURES.Recursion;
 public class RotatedBinarySearch {
     public static void main(String[] args) {
         int[]arr = {5,6,7,8,9,1,2,3};
-        int target = 2;
+        int target = 21;
 
         int ans=Rotated_BinarySearch(arr,target,0,arr.length-1);
         System.out.println(ans);
