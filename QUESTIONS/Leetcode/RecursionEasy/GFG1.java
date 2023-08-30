@@ -1,5 +1,6 @@
 package QUESTIONS.Leetcode.RecursionEasy;
 // [Sum Triangle from Array](https://www.geeksforgeeks.org/sum-triangle-from-array/) `GFG`
+// SAGAR SHUKLA
 
 import java.util.Arrays;
 
