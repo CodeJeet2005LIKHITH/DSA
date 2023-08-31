@@ -6,11 +6,10 @@ import java.util.ArrayList;
 public class LinearSearchONMulitpleOccurence {
     public static void main(String[] args) {
         int[]arr = {8,7,6,5,8,1};
-        
-//        ArrayList<Integer> list  = new ArrayList<Integer>();
-        // HERE WE ARE PASSING LIST IN ARGUMENT
+        ArrayList<Integer> list  = new ArrayList<Integer>();
+//         HERE WE ARE PASSING LIST IN ARGUMENT
 
-//        System.out.println(LSOMO(arr,list,8,0));
+        System.out.println(LSOMO(arr,list,8,0));
         System.out.println(LSOMO1(arr,8,0));
         
         
