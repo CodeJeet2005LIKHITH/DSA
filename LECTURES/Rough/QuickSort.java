@@ -15,7 +15,7 @@ public class QuickSort {
         }
         int s = start;
         int e = end;
-        int middle = start+(end-start)/2;
+        int middle = s+(e-s)/2;
         int pivot = arr[middle];
         while(arr[s] > pivot){
             s++;
@@ -28,7 +28,7 @@ public class QuickSort {
             arr[start] = arr[end];
             arr[end] = temp;
         }
-        Quick_Sort(arr, start, end);
-        Quick_Sort(arr, start+1, end);
+        Quick_Sort(arr, start, e);
+        Quick_Sort(arr, s, end);
     }
 }

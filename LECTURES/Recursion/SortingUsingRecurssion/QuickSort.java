@@ -34,7 +34,7 @@ public class QuickSort {
         }
         Quick_Sort(arr, start, e);
         Quick_Sort(arr, s, end);
-
+ 
     
 }
 }
