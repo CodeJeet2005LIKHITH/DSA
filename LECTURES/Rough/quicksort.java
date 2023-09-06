@@ -18,6 +18,8 @@ public class quicksort {
         int pivot = arr[middle];
         int left = start;
         int right = end;
+
+        while(left <= right){
         while(arr[left] < pivot){
             left++;
         }
@@ -31,6 +33,7 @@ public class quicksort {
             left++;
             right--;
         }
+    }
             qs(arr,start,right);
             qs(arr, left, end);
     }
