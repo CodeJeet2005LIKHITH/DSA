@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class MergeSort {
     public static void main(String[] args) {
-        int[]arr = {3,1,4,2,3};
+        int[]arr = {81,80,7,35675,7896,58458,45,36,54,72,90};
         Ms(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
         
