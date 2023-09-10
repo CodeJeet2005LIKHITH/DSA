@@ -9,28 +9,34 @@ public class QuickSort {
         System.out.println(Arrays.toString(arr));
         
     }
-    private static void Quick_Sort(int[]arr,int start,int end){
-        if(start >= end){
+    private static void Quick_Sort(int[]arr,int left,int right){
+
+        if(left >= right){
             return;
         }
-        int s = start;
-        int e = end;
+        int s = left;
+        int e = right;
+
         int middle = s+(e-s)/2;
         int pivot = arr[middle];
+
         while(s <= e){
-        while(arr[s] > pivot){
-            s++;
+            while(arr[s] < pivot){
+                s++;
+            }
+            while(arr[e] > pivot){
+                e--;
+            }
+            if(s <= e){
+                int temp = arr[s];
+                arr[s] = arr[e];
+                arr[e] = temp;
+                s++;
+                e--;
+            }
+            Quick_Sort(arr, left, e);
+            Quick_Sort(arr, s, right);
         }
-        while(arr[e] < pivot){
-            e--;
-        }
-        if(s <= e){
-            int temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
-        }
-    }
-        Quick_Sort(arr, start, e);
-        Quick_Sort(arr, s, end);
-    }
+
 }
+    }
