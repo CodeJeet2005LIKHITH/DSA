@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class mms {
     public static void main(String[] args) {
-        int[]arr = {1, 9, 81, 18, 63, 27, 45, 36, 54, 72, 90};
+        int[]arr = {72,55,89,25,101,95,143,2,150,65,185};
         mergesort(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
