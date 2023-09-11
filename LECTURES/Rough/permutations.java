@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class permutations {
     public static void main(String[] args) {
-        String str = "abc";
+        String str = "CAHRAN";
         String newStr = "";
         System.out.println(permuatationsList(str,newStr));
         
