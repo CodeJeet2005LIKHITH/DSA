@@ -1,6 +1,7 @@
 package LECTURES.Rough;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Fullpath {
     public static void main(String[] args) {
@@ -9,7 +10,7 @@ public class Fullpath {
         // System.out.println(PathWithDiag(3,3,""));
         boolean[][]arr = {
             {true,true,true},
-            {true,false,true},
+            {true,true,true},
             {true,true,true}
         };
 
@@ -31,7 +32,9 @@ public class Fullpath {
 
         };
         // System.out.println(Maze(0,0,arr,""));
-        MazeBacktrack(0,0,backtrack,"");
+        // MazeBacktrack(0,0,backtrack,"");
+        int[][]path = new int[backtrack.length][backtrack[0].length];
+        PrintPath(0, 0, backtrack, path, 1, "");
     }
     private static ArrayList<String> path(int row, int col,String Path){
         
@@ -102,6 +105,7 @@ public class Fullpath {
     private static void MazeBacktrack(int row,int colum,boolean[][]maze,String path){
         if(row == maze.length-1 && colum == maze[0].length-1){
             System.out.println(path);
+            System.out.println();
             return;
         }
 
@@ -120,6 +124,42 @@ public class Fullpath {
             MazeBacktrack(row, colum-1, maze, path+"L");
         }
         maze[row][colum] = true;
+    }
+
+    // path print all directions
+
+    private static void PrintPath(int row,int col,boolean[][]maze,int[][]path,int step,String p){
+        if(row == maze.length-1 && col == maze[0].length-1){
+            System.out.println(p);
+            for(int[]arr : path){
+                System.out.println(Arrays.toString(arr));
+            }
+            return;
+        }
+     
+        if(!maze[row][col])return;
+
+
+        maze[row][col] = false;
+        path[row][col] = step;
+
+
+        
+        if(row < maze.length-1){
+            PrintPath(row+1, col, maze,path,step+1,p+"D");
+        }
+        if(col < maze[0].length-1 ){
+            PrintPath(row, col+1, maze,path,step+1, p+"R");
+        }
+        if(row > 0 ){
+            PrintPath(row-1, col, maze,path,step+1, p+"U");
+        }
+        if(col> 0 ){
+            PrintPath(row, col-1, maze,path,step+1 , p+"L");
+        }
+
+        path[row][col] = 0;
+        maze[row][col] = true;
     }
     
 }

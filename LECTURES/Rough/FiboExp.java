@@ -2,7 +2,7 @@ package LECTURES.Rough;
 
 public class FiboExp {
     public static void main(String[] args) {
-        System.out.println(Fibo(3));
+        System.out.println(Fibo(6));
         
     }
     private static int Fibo(int n){
@@ -10,10 +10,10 @@ public class FiboExp {
             return n;
         }
         int a = Fibo(n-1);
-        System.out.println(n);
+//        System.out.println(n);
        
         int b = Fibo(n-2);
-        System.out.println(n);
+//        System.out.println(n);
         
         return a+b;
     }

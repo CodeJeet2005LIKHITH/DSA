@@ -3,7 +3,7 @@ package LECTURES.Rough;
 public class FiboNacci {
     public static void main(String[] args) {
         
-        System.out.println(Fibo(4));
+        System.out.println(Fibo(6));
     }
     private static int Fibo(int n){
         if(n == 0 || n == 1){
